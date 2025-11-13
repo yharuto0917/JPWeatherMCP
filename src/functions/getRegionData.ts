@@ -4,7 +4,7 @@ import { XMLParser } from "fast-xml-parser";
 const LIVEDOOR_WEATHER_AREA_URL = 'https://weather.tsukumijima.net/primary_area.xml';
 
 export async function getWeatherAreaData(): Promise<RegionCode | null> {
-    console.log(`データを取得しています...`);
+    console.error(`データを取得しています...`);
 
     try {
         // APIからXMLデータを取得
@@ -33,12 +33,12 @@ export async function getWeatherAreaData(): Promise<RegionCode | null> {
 
         const parser = new XMLParser(parserOptions);
         const jsonObj = parser.parse(xmlData) as RegionCode;
-        console.log(`データの取得が完了しました。`);
+        console.error(`データの取得が完了しました。`);
         return jsonObj;
     } catch (error) {
         console.error(`データの取得に失敗しました: ${error}`);
         return null;
     } finally {
-        console.log(`データの取得が完了しました。`);
+        console.error(`データの取得が完了しました。`);
     }
 }
