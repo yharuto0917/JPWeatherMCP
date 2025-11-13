@@ -32,7 +32,6 @@
 ### ✅ 前提条件
 
 - Node.js
-- npm
 
 ### 📦 インストール
 
@@ -87,7 +86,7 @@ code claude_desktop_config.json
 ```bash
 code settings.json
 ```
-1. 以下の内容を追加します。
+3. 以下の内容を追加します。
 ```json
 {
     "mcpServers": {
